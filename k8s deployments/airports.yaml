@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: airports-assembly
+  name: airports-assembly
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: airports-assembly
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: airports-assembly
+    spec:
+      containers:
+      - image: sivajey/airports-assembly-1.1.0
+        name: airports-assembly
+        ports:
+        - containerPort: 8080
+        resources: {}
+status: {}
