@@ -1,6 +1,11 @@
-stage('clone repository) {
-      checkout scm
-      }
-      stage('Build image') {
-      app = docker.build("sivajey/Devops)
-                         }
+pipeline {
+    agent { dockerfile true }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+                sh 'svn --version'
+            }
+        }
+    }
+}
