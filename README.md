@@ -28,20 +28,24 @@ kubectl get ns
 Create a deployments:
 
 kubectl create -f countries.yaml -n countries-assembly
+
 kubectl create -f countries-svc.yaml -n countries-assembly
 
 kubectl create -f airports.yaml -n airports-assembly
+
 kubectl create -f airports-svc.yaml -n airports-assembly
 
 
 to view the deployments:
 
 kubectl get deployments -n countries-assembly
+
 kubectl get deployments -n airports-assembly
 
 To view the services:
 
 kubectl get svc -n airports-assembly
+
 kubectl get svc -n countries-assembly
 
 Currently 
@@ -58,9 +62,13 @@ get the endpoints
 kubectl get svc --all-namespaces
 
 kubectl run busybox --image=busybox -it sh
+
 wget -O- http://endpoint:8080/countries
+
 wget -O- http://endpoint:8080/countries/query
+
 wget -O- http://endpoint:8080/airports
+
 wget -O- http://endpoint:8080/airports/query
 
 or you can open the browser and use the external ip to get the list and do queries.
