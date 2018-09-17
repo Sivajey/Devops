@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    run: airports-assembly
+  name: airports-assembly
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    run: airports-assembly
+  type: LoadBalancer
+status:
+  loadBalancer: {}
