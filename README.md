@@ -18,6 +18,7 @@ we can have two environment in k8s cluster to isolate between each other.
 Create a namespace to isolate the environments:
 
 kubectl create -f airports-assembly-ns.yaml
+
 kubectl create -f countries-assembly-ns.yaml
 
 To view the namespaces:
