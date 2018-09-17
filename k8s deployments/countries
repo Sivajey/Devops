@@ -1,0 +1,25 @@
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: countries-assembly
+  name: countries-assembly
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: countries-assembly
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: countries-assembly
+    spec:
+      containers:
+      - image: sivajey/countries-assembly
+        name: countries-assembly
+        ports:
+        - containerPort: 8080
+        resources: {}
+status: {}
