@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('first') {
             steps {
-                sh 'echo "Tests Passed'
+                sh 'docker build -t testing .'
             }
         }
 		
