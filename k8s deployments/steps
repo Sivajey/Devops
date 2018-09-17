@@ -1,0 +1,31 @@
+Create a namespace to isolate the environments:
+
+kubectl create -f airports-assembly-ns.yaml
+kubectl create -f countries-assembly-ns.yaml
+
+To view the namespaces:
+
+kubectl get ns
+
+Create a deployments:
+
+kubectl create -f countries.yaml -n countries-assembly
+kubectl create -f countries-svc.yaml -n countries-assembly
+
+kubectl create -f airports.yaml -n airports-assembly
+kubectl create -f airports-svc.yaml -n airports-assembly
+
+
+to view the deployments:
+
+kubectl get deployments -n countries-assembly
+kubectl get deployments -n airports-assembly
+
+To view the services:
+
+kubectl get svc -n airports-assembly
+
+
+
+
+
