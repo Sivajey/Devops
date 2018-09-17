@@ -39,6 +39,17 @@ To view the services:
 kubectl get svc -n airports-assembly
 kubectl get svc -n countries-assembly
 
+Currently 
+airport-service is running on the version 1.0.1
+
+and using kubernetes deployments we can do rolling update without any service interruption
+
+kubectl edit deployment countries-assembly -n countries-assembly
+
+change the image version to 1.1.0 and save the file.
+
+
+
 
 
 
