@@ -3,7 +3,9 @@
 1.CI Plan:
 
 SCM: Github
+
 CI Tool: Jenkins
+
 Repository : DockerHub
 
 Once the developer push the jar file to scm ( Github) , I’m using jenkins to build a docker image and push that to the 
