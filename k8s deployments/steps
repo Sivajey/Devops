@@ -24,6 +24,7 @@ kubectl get deployments -n airports-assembly
 To view the services:
 
 kubectl get svc -n airports-assembly
+kubectl get svc -n countries-assembly
 
 
 
