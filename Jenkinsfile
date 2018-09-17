@@ -1,7 +1,7 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('first') {
+        checkout scm {
             steps {
                 sh 'docker build -t testing .'
             }
