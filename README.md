@@ -1,6 +1,6 @@
 # Devops
 
-CI Plan:
+1.CI Plan:
 
 SCM: Github
 CI Tool: Jenkins
@@ -8,6 +8,8 @@ Repository : DockerHub
 
 Once the developer push the jar file to scm ( Github) , I’m using jenkins to build a docker image and push that to the 
 repository (DockerHub)
+
+2.CD Plan:
 
 I am using GCP as a cloud environment, and using GKE to build the k8s cluster and deployments.
 
