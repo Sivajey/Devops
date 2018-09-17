@@ -49,3 +49,17 @@ and using kubernetes deployments we can do rolling update without any service in
 kubectl edit deployment countries-assembly -n countries-assembly
 
 change the image version to 1.1.0 and save the file.
+
+get the endpoints 
+
+kubectl get svc --all-namespaces
+
+kubectl run busybox --image=busybox -it sh
+wget -O- http://endpoint:8080/countries
+wget -O- http://endpoint:8080/countries/query
+wget -O- http://endpoint:8080/airports
+wget -O- http://endpoint:8080/airports/query
+
+or you can open the browser and use the external ip to get the list and do queries.
+
+
