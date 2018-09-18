@@ -29,8 +29,10 @@ node {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('https://registry.hub.docker.com', 'docker') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
+            sh "docker login -u $dockerUser -p $dockerPassword"
+            sh "docker tag $containerName:$tag $dockerUser/$containerName:$tag"
+            sh "docker push $dockerUser/$containerName:$tag"
+            echo "Image push complete"
         }
     }
 }
