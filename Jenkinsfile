@@ -1,4 +1,4 @@
-def CONTAINER_NAME="jar-webapplications"
+def CONTAINER_NAME="java-webapplications"
 def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="sivajey"
 
