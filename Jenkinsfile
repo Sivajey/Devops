@@ -1,5 +1,5 @@
 def CONTAINER_NAME="java-applications"
-def CONTAINER_TAG="latest"
+def CONTAINER_TAG="v2"
 def DOCKER_HUB_USER="sivajey"
 
 node {
