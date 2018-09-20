@@ -1,13 +1,13 @@
-Kind: NetworkPolicy
+kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
   name: access-countries # pick a name
 spec:
   podSelector:
     matchLabels:
-      run=countries-assembly # selector for the pods
+      run: countries-assembly # selector for the pods
   ingress: # allow ingress traffic
   - from:
     - podSelector: # from pods
         matchLabels: # with this label
-          access: 'countries' # 'true' *needs* quotes in YAML, apparently
+          access: 'countries' #  *needs* quotes in YAML, apparently
