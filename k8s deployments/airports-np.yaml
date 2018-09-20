@@ -1,11 +1,11 @@
-Kind: NetworkPolicy
+kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
   name: access-airports # pick a name
 spec:
   podSelector:
     matchLabels:
-      run=airports-assembly # selector for the pods
+      run: airports-assembly # selector for the pods
   ingress: # allow ingress traffic
   - from:
     - podSelector: # from pods
